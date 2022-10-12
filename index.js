@@ -16,6 +16,7 @@ app.use(express.urlencoded({
 app.use(express.json())
 //import Routes
 const thoughsRoutes = require('./routes/thoughtsRoutes')
+const authRoutes = require('./routes/authRoutes')
 
 
 //Models
@@ -61,6 +62,7 @@ app.use((req, res, next)=>{
 
 //Routes
 app.use('/thoughts', thoughsRoutes)
+app.use('/', authRoutes)
 
 app.get('/', ThoughtController.showThoughts)
 
