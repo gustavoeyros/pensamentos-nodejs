@@ -14,11 +14,16 @@ app.use(express.urlencoded({
     extended: true
 }))
 app.use(express.json())
+//import Routes
+const thoughsRoutes = require('./routes/thoughtsRoutes')
 
 
 //Models
 const Thought = require('./models/Thought')
 const User = require('./models/User')
+
+//Controllers
+const ThoughtController = require('./controllers/ThoughtController')
 
 
 
@@ -54,6 +59,10 @@ app.use((req, res, next)=>{
     next()
 })
 
+//Routes
+app.use('/thoughts', thoughsRoutes)
+
+app.get('/', ThoughtController.showThoughts)
 
 conn.sync().then(()=>{
     app.listen(3000)
