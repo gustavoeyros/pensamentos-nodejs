@@ -16,13 +16,20 @@ app.use(express.urlencoded({
 app.use(express.json())
 
 
+//Models
+const Thought = require('./models/Thought')
+const User = require('./models/User')
+
+
+
+
 //middleware da sessão
 app.use(
     session({
         name: "session",
         secret: `${process.env.SECRET_KEY}`,
         resave: "false",
-        saveUnitialized: false,
+        saveUninitialized: false,
         store: new FileStore({
             logFn: function() {},
             path: require('path').join(require('os').tmpdir(), 'sessions'),
