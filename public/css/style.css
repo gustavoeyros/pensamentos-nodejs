@@ -46,6 +46,18 @@
     padding: 2em;
 }
 
+/*MESSAGES*/
+.message{
+    padding: 1em;
+    color: #004085;
+    background-color: #cce5ff;
+    border: 1px solid #b8daff;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto 2em;
+    max-width: 60%;
+}
+
 /*LOGIN E REGISTER*/
 
 .auth-container{
@@ -100,6 +112,24 @@ form input[type='submit']:hover,
     color: white;
 }
 
+/*CREATE THOUGHT FORM*/
+
+.thought-form-container a{
+    color: var(--purple);
+}
+.thought-form-container a:hover{
+    color: white;
+}
+.thought-form-container h1{
+    margin: 1em 0;
+    color: white;
+    border-left: 4px solid var(--purple);
+    padding: 0.3em;
+}
+.thought-form-container form{
+    max-width: 30%;
+    margin-top: 1.5em;
+}
 
 /*FOOTER*/
 footer{
